@@ -1,0 +1,172 @@
+/*ex1*/
+body {
+    margin: 0;
+    padding: 0;
+    background: #000000;
+}
+  
+.container {
+    width: 200px;
+    height: 100px;
+    padding-top: 100px;
+    margin: 0 auto;
+}
+  
+.ex1 {
+    width: 10px;
+    height: 10px;
+    margin: 10px auto;
+    border-radius: 50px;
+    background: #ffffff;
+    animation-name: mexer;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+  
+@keyframes mexer {
+    0% {
+      transform: translate(-15px);
+    }
+    50% {
+      transform: translate(15px);
+    }
+    100% {
+      transform: translate(-15px);
+    }
+}
+
+
+/*ex2*/
+.container2{
+    position: absolute;
+    float: left;
+    margin: 140px 100px;
+    width: 500px;
+    height: 100px;
+    padding-top: 100px;
+  }
+
+  .ex2{
+    position: absolute;
+    top: 0px;
+    width: 2px;
+    height: 8px;
+    background-color: red;
+    
+    margin-left: 550px;
+    background-color: #2410CB;
+    animation: linha 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+  }
+
+  .circulo{
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: blue;
+  }
+  .circulo-cima{
+    top: 0px;
+    left: -3.5px;
+  }
+  .circulo-baixo{
+    bottom: 0px;
+    left: -3.5px;
+  }
+  .ponto{
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    left: -1.5px;
+  }
+  .ex2 > span{
+    background-color: #D4141E;
+  }
+  .ex2 > .pontilhado > .ponto{
+    background-color: #D4141E;
+  }
+  .ex2 > .pontilhado > .ponto-cima{
+    top: 0px;
+    animation: ponto-cima 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+  }
+  .ex2 > .pontilhado > .ponto-baixo{
+    bottom: 0px;
+    animation: ponto-baixo 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+  }
+  .ex2 > .pontilhado > .ponto-meio-cima{
+    top: 0px;
+    animation: ponto-meio-cima 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+  }
+  .ex2 > .pontilhado > .ponto-meio-baixo{
+    bottom: 0px;
+    animation: ponto-meio-baixo 2s cubic-bezier(0.250, 0, 0.705, 1) infinite;
+  }  
+  @keyframes linha{
+    0%{height: 4px; top: 0px; left: 0px; transform: rotate(-65deg)}
+    10%{height: 220px; top: -110px; left: 15px;}
+    45%{height: 200px; top: -100px; left: 25px;}
+    70%{height: 8px; top: 0px; left: 25px; transform: rotate(0deg);}
+    100%{height: 8px; top: 0px; left: 15px; transform: rotate(0deg);}
+  }
+  @keyframes ponto-cima{
+    0%{top: -30px}
+    10%{top: -30px;}
+    45%{top: -25px;}
+    60%{top: 0px;}
+    100%{top: 0px;}
+  }
+  @keyframes ponto-baixo{
+    0%{bottom: -30px}
+    10%{bottom: -30px;}
+    45%{bottom: -25px;}
+    60%{bottom: 0px;}
+    100%{bottom: 0px;}
+  }
+  @keyframes ponto-meio-cima{
+    0%{}
+    10%{}
+    45%{top: 78px;}
+    70%{top: -50px;}
+    85%{top: 0px;}
+    100%{top: 0px;}
+  }
+  @keyframes ponto-meio-baixo{
+    0%{}
+    10%{}
+    45%{bottom: 78px;}
+    70%{bottom: -50px;}
+    85%{bottom: 0px;}
+    100%{bottom: 0px;}
+  }
+
+  /*ex3*/
+  .container3{
+    width: 200px;
+    height: 100px;
+    padding-top: 300px;
+    margin: 0 auto;
+  }
+  .ex3 {
+     background: orange;
+      width: 300px;
+      height: 250px;
+  }
+  .ex3:hover {
+    opacity: 0.5;
+    animation: caminha 2s ease-in-out;
+    animation-delay: 100ms;
+  }
+  @keyframes caminha {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(300px);
+      border-radius: 50%;
+      background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    }
+  }
